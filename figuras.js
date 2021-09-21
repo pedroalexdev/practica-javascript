@@ -1,65 +1,50 @@
 //Este es el código del cuarado
 console.group("Cuadrado");
-//const ladoCuadrado = 5;
-//console.log(`Los lados del cuadrado miden ${ladoCuadrado}cm`);
 
 function perimetroCuadrado(lado) {
     return lado * 4;
 }
 perimetroCuadrado();
-//console.log(`El perimeto del cuadrado es ${perimetroCuadrado}cm`);
 
 function areaCuadrado(lado) {
     return lado * lado;
 }
-//console.log(`El área de mi cuadrado es ${areaCuadrado}cm^2`);
 console.groupEnd();
 
 //Código del Triángulo
 console.group("Triangulos");
-// const ladoTriangulo1 = 6;
-// const ladoTriangulo2 = 6;
-// const baseTriangulo = 4;
-// const alturaTriangulo = 5.5;
-// console.log(`Los lados de mi triangulo miden: ${ladoTriangulo1}cm, ${ladoTriangulo2}cm, ${baseTriangulo}cm`);
-// console.log(`La altura de mi triangulo mide ${alturaTriangulo}cm`);
 
 function perimetroTriangulo(lado1, lado2, base){
     return lado1 + lado2 + base;
 }
-//console.log(`El perimetro del triangulo es ${perimetroTriangulo}cm`);
 
 function areaTriangulo(base, altura){
     return (base * altura) / 2;
 }
-// console.log(`El área del triangulo es ${areaTriangulo}cm^2`);
 console.groupEnd();
 
 //Código del circulo
 console.group("Circulos");
 
-// //Radio
-// const radioCirculo = 4;
-// console.log(`El radio del círculo es ${radioCirculo}cm`);
-//Diámetro
 function diametroCirculo(radio){
     return radio * 2;
 }
-// console.log(`El díámetro del circulo es ${diametroCirculo}cm`);
+
+
 //PI
-const PI = Math.PI;
+// const PI = Math.PI;
+const PI = 3.1416;
 console.log(`El PI es ${PI}`);
+
 //Circunferencia
 function perimetroCirculo(radio){
     const diametro = diametroCirculo(radio);
     return diametro * PI;
 }
-// console.log(`El perímetro del circulo es ${perimetroCirculo}cm`);
 //area
 function areaCirculo(radio){
     return (radio * radio) * PI;
 }
-// console.log(`El área del circulo es ${areaCirculo}cm^2`);
 console.groupEnd();
 
 //Interaccion con HTML
@@ -68,7 +53,7 @@ function calcularPerimetroCuadrado(){
     const value = input.value;
 
     const perimetro = perimetroCuadrado(value);
-    alert(perimetro)
+    document.getElementById("perimetro").innerHTML = (`El perímetro del cuadrado es de ${perimetro}cm`);
 }
 
 function calcularAreaCuadrado(){
@@ -76,5 +61,45 @@ function calcularAreaCuadrado(){
     const value = input.value;
 
     const area = areaCuadrado(value);
-    alert(area)
+    document.getElementById("perimetro").innerHTML = (`El área del cuadrado es de ${area}cm^2`);
+
+}
+
+function calcularPerimetroTriangulo() {
+    const sidea = document.getElementById("lado1Triangulo");
+    const sideb = document.getElementById("lado2Triangulo");
+    const base = document.getElementById("baseTriangulo");
+    const valuea = parseInt(sidea.value);
+    const valueb = parseInt(sideb.value);
+    const valuec = parseInt(base.value);
+
+    const perimetroT = perimetroTriangulo(valuea, valueb, valuec);
+    document.getElementById("perimetro_triangulo").innerHTML = (`El perímetro del triangulo es de ${perimetroT}cm`);
+}
+
+function calcularAreaTriangulo() {
+    const base = document.getElementById("baseTriangulo");
+    const valuec = parseInt(base.value);
+    const altura = document.getElementById("alturaTriangulo");
+    const value_altura = parseInt(altura.value);
+
+    const areaT = areaTriangulo(valuec, value_altura);
+    document.getElementById("perimetro_triangulo").innerHTML = (`El área del triangulo es de ${areaT}cm^2`);
+    
+}
+
+function calcularPerimetroCirculo() {
+    const radio = document.getElementById("InputCirculo");
+    const value_c = radio.value;
+    
+    const circunferencia = perimetroCirculo(value_c);
+    document.getElementById("perimetro_circulo").innerHTML = (`El perímetro del circulo es de ${circunferencia}cm`);
+}
+
+function calcularAreaCirculo() {
+    const radio = document.getElementById("InputCirculo");
+    const value_c = radio.value;
+
+    const areaCircunferencia = areaCirculo(value_c);
+    document.getElementById("perimetro_circulo").innerHTML = (`El área del circulo es de ${areaCircunferencia}cm^2`);
 }

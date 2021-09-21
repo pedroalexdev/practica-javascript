@@ -4,8 +4,8 @@
     padding: 0;
 }
 body{
-    background: black;
-    color: gray;
+    // background: black;
+    // color: gray;
     font-size: 62.5%;
     header{
         margin: 2rem;
@@ -18,12 +18,26 @@ body{
     }
     main{
         margin: 2rem;
-        .square{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        div{
+            width: 10rem;
+            height: 10rem;
+            background: chartreuse;
+            margin: 1rem auto;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .box{
             width: 22.5rem;
-            height: 20rem;
+            height: auto;
             padding: 1rem;
+            margin: 2rem 1rem;
             border: solid gray 0.2rem;
-            border-radius: 5%;
+            border-radius: 2rem;
             display: flex;
             flex-direction: column;
             h2{
@@ -33,10 +47,32 @@ body{
             label{
                 font-size: 1.2rem;
             }
+            span{
+                font-size: 1.2rem;
+                text-decoration: underline;
+            }
             input{
-                margin: 2rem auto;
+                margin: 1rem;
                 width: 18rem;
                 height: 1.5rem;
+                border-radius: 0.5rem;
+                outline: none;
+                padding-left: 0.5rem;
+            }
+            button{
+                margin: 1rem .5rem;
+                background: chocolate;
+                border: solid 2px chocolate;
+                border-radius: 2rem;
+                padding: 1rem;
+            }
+            button:hover{
+                cursor: pointer;
+            }
+            p{
+                font-size: 1.4rem;
+                text-align: center;
+                margin: 2rem auto;
             }
         }
     }
