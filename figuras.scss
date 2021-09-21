@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: black;
+    color: gray;
+    font-size: 62.5%;
+    header{
+        margin: 2rem;
+        h1{
+            font-size: 1.8rem;
+        }
+        p{
+            font-size: 1.2rem;
+        }
+    }
+    main{
+        margin: 2rem;
+        .square{
+            width: 25rem;
+            height: 20rem;
+            padding: 1rem;
+            border: solid gray 0.2rem;
+            border-radius: 5%;
+            display: flex;
+            flex-direction: column;
+            h2{
+                font-size: 1.6rem;
+                text-align: center;
+            }
+            label{
+                font-size: 1.2rem;
+            }
+            input{
+                margin: 2rem auto;
+            }
+        }
+    }
+}

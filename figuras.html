@@ -5,15 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Figuras Geométrcas | primeros pasos prácticos con JS</title>
-    <style>
-        body{
-            background: black;
-            color: gray;
-        }
-    </style>
+    <link rel="stylesheet" href="./figuras.css">
 </head>
 <body>
+    <header>
     <h1>Figuras Geométricas</h1>
+    <p>Este es mi primer taller del curso práctico de Java Script con el profe <i>Juan DC</i></p>
+    </header>
+    <main>
+        <section class="square">
+            <h2>Calcula el área y perímetro de un cuadrado</h2>
+            <form class="square_form" action="">
+                <label for="InputCuadrado">
+                    Escribe cuando mide un lado de tu cuadrado
+                </label>
+                <input id="InputCuadrado" type="number">
+                <button type="button" onclick="calcularPerimetroCuadrado()">
+                    Calcula el perímetro
+                </button>
+                <button type="button" onclick="calcularAreaCuadrado()">
+                    Calcula el área
+                </button>
+            </form>
+        </section>
+    </main>
     <script src="./figuras.js"></script>
 </body>
 </html>
