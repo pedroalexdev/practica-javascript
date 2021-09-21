@@ -19,7 +19,7 @@ body{
     main{
         margin: 2rem;
         .square{
-            width: 25rem;
+            width: 22.5rem;
             height: 20rem;
             padding: 1rem;
             border: solid gray 0.2rem;
@@ -35,6 +35,8 @@ body{
             }
             input{
                 margin: 2rem auto;
+                width: 18rem;
+                height: 1.5rem;
             }
         }
     }
