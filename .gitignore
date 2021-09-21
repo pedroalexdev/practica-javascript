@@ -107,5 +107,6 @@ dist
 .vscode
 
 #Entorno del preprocesador SASS
-.scss
-.css.map
+
+*.scss
+*.css.map
