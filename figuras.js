@@ -30,7 +30,6 @@ function diametroCirculo(radio){
     return radio * 2;
 }
 
-
 //PI
 // const PI = Math.PI;
 const PI = 3.1416;
